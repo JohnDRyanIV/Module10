@@ -27,7 +27,7 @@ class Customer:
         return message
 
 
-# Driver
+''''# Driver
 customer1 = Customer(1029384, 'Pratchet', 'Harold', '515-555-1111', '123 Alphabet Road, Hell Town, Ohio')
 customer2 = Customer('1029384f', 'Pratchet', 'Harold', '515-555-1111', '123 Alphabet Road, Hell Town, Ohio')
 print(str(customer1))
@@ -38,4 +38,4 @@ print(repr(customer2))
 print("----------")
 print(customer1.display())
 print("----------")
-print(customer2.display())
+print(customer2.display())'''

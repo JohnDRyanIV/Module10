@@ -4,15 +4,21 @@ from class_definitions import student as s
 
 class MyTestCase(unittest.TestCase):
     def setUp(self):
-        self.student = s.Student("Dorna", "Jim", "Comp Sci", 3.0)
+        self.student = s.Student("Dorna", "Jim", "Comp Sci")
 
     def tearDown(self):
         del self.student
 
     def test_object_created_required_attributes(self):
-        pass
+        self.assertEqual(self.student.last_name, "Dorna")
+        self.assertEqual(self.student.first_name, "Jim")
+        self.assertEqual(self.student.major, "Comp Sci")
+        self.assertEqual(self.student.gpa, 0.00)
 
     def test_object_created_all_attributes(self):
+        pass
+
+    def test_student_str(self):
         pass
 
     def test_object_not_created_error_last_name(self):

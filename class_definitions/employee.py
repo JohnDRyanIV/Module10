@@ -43,10 +43,10 @@ class Employee:
         return message
 
 
-# Driver
+'''# Driver
 dt = datetime.datetime(2019, 6, 28)
 emp =  Employee('Sasha', 'Patel', '123 Main Street\nUrban, Iowa', '123-456-7890', True,  dt, 40000)
 emp2 = Employee('Sasha', 'Patel', '123 Main Street\nUrban, Iowa', '123-456-7890', False, dt, 7.25)
 print(emp.display())
 print('--------------')
-print(emp2.display())
+print(emp2.display())'''
