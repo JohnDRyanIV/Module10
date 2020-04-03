@@ -16,7 +16,12 @@ class MyTestCase(unittest.TestCase):
         self.assertEqual(self.student.gpa, 0.00)
 
     def test_object_created_all_attributes(self):
-        pass
+        student = s.Student("Dorna", "Jim", "Comp Sci", 3.50)
+        print(str(student))
+        assert student.last_name == "Dorna"
+        assert student.first_name == "Jim"
+        assert student.major == "Comp Sci"
+        assert student.gpa == 3.50
 
     def test_student_str(self):
         pass
