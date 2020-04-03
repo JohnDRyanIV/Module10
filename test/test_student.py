@@ -26,14 +26,17 @@ class MyTestCase(unittest.TestCase):
         student = s.Student("Dorna", "Jim", "Comp Sci", 3.50)
         assert str(student) == "Dorna, Jim has major Comp Sci with gpa: 3.5"
 
-    def test_object_not_created_error_major(self):
+    def test_object_not_created_error_last_name(self):
+        with self.assertRaises(TypeError):
+            student = s.Student("Jim", "Comp Sci")
+            student = s.Student("Jim", "Comp Sci", 3.50)
         with self.assertRaises(ValueError):
-            student = s.Student("Dorna", "Jim")
+            student = s.Student("Jim", "Comp Sci", "3.50")
 
     def test_object_not_created_error_first_name(self):
         pass
 
-    def test_object_not_created_error_last_name(self):
+    def test_object_not_created_error_major(self):
         pass
 
     def test_object_not_created_error_gpa(self):
