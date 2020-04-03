@@ -10,6 +10,8 @@ class Student:
             raise ValueError
         if not name_characters.issuperset(lname) or not name_characters.issuperset(fname):
             raise ValueError
+        if major not in majors:
+            raise ValueError
         self.last_name = lname
         self.first_name = fname
         self.major = major
