@@ -17,14 +17,14 @@ class MyTestCase(unittest.TestCase):
 
     def test_object_created_all_attributes(self):
         student = s.Student("Dorna", "Jim", "Comp Sci", 3.50)
-        print(str(student))
         assert student.last_name == "Dorna"
         assert student.first_name == "Jim"
         assert student.major == "Comp Sci"
         assert student.gpa == 3.50
 
     def test_student_str(self):
-        pass
+        student = s.Student("Dorna", "Jim", "Comp Sci", 3.50)
+        assert str(student) == "Dorna, Jim has major Comp Sci with gpa: 3.5"
 
     def test_object_not_created_error_last_name(self):
         pass
