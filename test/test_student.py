@@ -41,7 +41,11 @@ class MyTestCase(unittest.TestCase):
             student = s.Student("Dorna", "Comp Sci", "3.50")
 
     def test_object_not_created_error_major(self):
-        pass
+        with self.assertRaises(TypeError):
+            student = s.Student("Dorna", "Jim")
+            student = s.Student("Dorna", "Jim", 3.50)
+        with self.assertRaises(ValueError):
+            student = s.Student("Dorna", "Jim", "3.50")
 
     def test_object_not_created_error_gpa(self):
         pass
